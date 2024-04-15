@@ -1,0 +1,26 @@
+<<<<<<< HEAD
+{% extends 'homework4_app/base.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+    <h2>{{ title }}</h2>
+    {% if form %}
+        {% include 'homework4_app/form.html' %}
+    {% else %}
+        <h3>форма не заполнена</h3>
+    {% endif %}
+=======
+{% extends 'homework4_app/base.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+    <h2>{{ title }}</h2>
+    {% if form %}
+        {% include 'homework4_app/form.html' %}
+    {% else %}
+        <h3>форма не заполнена</h3>
+    {% endif %}
+>>>>>>> 637cff90a8d8993df125dd367fc6c9db2e3da962
+{% endblock %}

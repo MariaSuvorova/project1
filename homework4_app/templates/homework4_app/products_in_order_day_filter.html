@@ -1,0 +1,58 @@
+<<<<<<< HEAD
+{% extends 'homework3_app/base.html' %}
+
+{% block title %}Детализация по времени{% endblock %}
+
+{% block content %}
+    <h2>Детализация заказов клиента {{ customer.username }} </h2>
+    {% for days, products in day_filter.items %}
+        <h4> Товары в заказах за последние: {{ days }} дней </h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Позиция</th>
+                        <th>Товар</th>
+                        <th>Цена</th>
+                    </tr>
+                </thead>
+            {% for product in products %}
+                <tbody>
+                    <tr>
+                        <td> {{ forloop.counter }} </td>
+                        <td> {{ product.title }} </td>
+                        <td> {{ product.price }} </td>
+                    </tr>
+            {% endfor%}
+                </tbody>
+            </table>
+    {% endfor %}
+=======
+{% extends 'homework3_app/base.html' %}
+
+{% block title %}Детализация по времени{% endblock %}
+
+{% block content %}
+    <h2>Детализация заказов клиента {{ customer.username }} </h2>
+    {% for days, products in day_filter.items %}
+        <h4> Товары в заказах за последние: {{ days }} дней </h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Позиция</th>
+                        <th>Товар</th>
+                        <th>Цена</th>
+                    </tr>
+                </thead>
+            {% for product in products %}
+                <tbody>
+                    <tr>
+                        <td> {{ forloop.counter }} </td>
+                        <td> {{ product.title }} </td>
+                        <td> {{ product.price }} </td>
+                    </tr>
+            {% endfor%}
+                </tbody>
+            </table>
+    {% endfor %}
+>>>>>>> 637cff90a8d8993df125dd367fc6c9db2e3da962
+{% endblock %}

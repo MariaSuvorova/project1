@@ -1,0 +1,54 @@
+<<<<<<< HEAD
+{% extends 'homework3_app/base.html' %}
+
+{% block title %}Товары в заказе{% endblock %}
+
+{% block content %}
+    <h2>Детализация заказа клиента {{ customer.username }} </h2>
+    {% for product in products %}
+        <h4> Заказ {{ order.id }} на сумму {{ order.total }}</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Позиция</th>
+                        <th>Товар</th>
+                        <th>Цена</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> {{ forloop.counter }} </td>
+                        <td> {{ product.title }} </td>
+                        <td> {{ product.price }} </td>
+                    </tr>
+                </tbody>
+            </table>
+    {% endfor %}
+=======
+{% extends 'homework3_app/base.html' %}
+
+{% block title %}Товары в заказе{% endblock %}
+
+{% block content %}
+    <h2>Детализация заказа клиента {{ customer.username }} </h2>
+    {% for product in products %}
+        <h4> Заказ {{ order.id }} на сумму {{ order.total }}</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Позиция</th>
+                        <th>Товар</th>
+                        <th>Цена</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> {{ forloop.counter }} </td>
+                        <td> {{ product.title }} </td>
+                        <td> {{ product.price }} </td>
+                    </tr>
+                </tbody>
+            </table>
+    {% endfor %}
+>>>>>>> 637cff90a8d8993df125dd367fc6c9db2e3da962
+{% endblock %}

@@ -1,0 +1,52 @@
+<<<<<<< HEAD
+{% extends 'homework3_app/base.html' %}
+
+{% block title %}Заказы клиента {{ customer.id }} {% endblock %}
+
+{% block content %}
+    <h2>Заказы клиента {{ customer.username }} </h2>
+    {% for order in orders %}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Номер заказа</th>
+                    <th>Дата</th>
+                    <th>Общая стоимость</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> {{ order.id }} </td>
+                    <td> {{ order.creation_date }} </td>
+                    <td> {{ order.total }} </td>
+                </tr>
+            </tbody>
+    {% endfor%}
+
+=======
+{% extends 'homework3_app/base.html' %}
+
+{% block title %}Заказы клиента {{ customer.id }} {% endblock %}
+
+{% block content %}
+    <h2>Заказы клиента {{ customer.username }} </h2>
+    {% for order in orders %}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Номер заказа</th>
+                    <th>Дата</th>
+                    <th>Общая стоимость</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> {{ order.id }} </td>
+                    <td> {{ order.creation_date }} </td>
+                    <td> {{ order.total }} </td>
+                </tr>
+            </tbody>
+    {% endfor%}
+
+>>>>>>> 637cff90a8d8993df125dd367fc6c9db2e3da962
+{% endblock %}

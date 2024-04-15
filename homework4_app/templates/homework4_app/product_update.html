@@ -1,0 +1,54 @@
+<<<<<<< HEAD
+{% extends 'homework4_app/base.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+    <h2>Детализация данных товара с id {{ product.id }}</h2>
+    <div>Название: {{ product.title }} </div>
+    <div>Описание: {{ product.description }} </div>
+    <div>Цена: {{ product.price }} </div>
+    <div>Количество: {{ product.quantity }} </div>
+
+    <p>
+    {% if product.image %}
+        <img src="{{ product.image.url }}" alt="IMG">
+    {% else %}
+        <p>Изображение не загружено</p>
+    {% endif %}
+    </p>
+
+    <h2>{{ title }}</h2>
+    {% if form %}
+        {% include 'homework4_app/form.html' %}
+    {% else %}
+        <h3>Данных формы не обнаружено</h3>
+    {% endif %}
+=======
+{% extends 'homework4_app/base.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+    <h2>Детализация данных товара с id {{ product.id }}</h2>
+    <div>Название: {{ product.title }} </div>
+    <div>Описание: {{ product.description }} </div>
+    <div>Цена: {{ product.price }} </div>
+    <div>Количество: {{ product.quantity }} </div>
+
+    <p>
+    {% if product.image %}
+        <img src="{{ product.image.url }}" alt="IMG">
+    {% else %}
+        <p>Изображение не загружено</p>
+    {% endif %}
+    </p>
+
+    <h2>{{ title }}</h2>
+    {% if form %}
+        {% include 'homework4_app/form.html' %}
+    {% else %}
+        <h3>Данных формы не обнаружено</h3>
+    {% endif %}
+>>>>>>> 637cff90a8d8993df125dd367fc6c9db2e3da962
+{% endblock %}
